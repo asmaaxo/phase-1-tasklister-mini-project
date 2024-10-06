@@ -1,37 +1,130 @@
-html {
+body, html {
   height: 100%;
-  width: 100%;
-  font-family: "Titillium Web", sans-serif;
-}
-
-body {
-  min-height: 100%;
-  min-width: 100%;
-  background: linear-gradient(pink, violet);
-}
-
-button {
-  font-size: 7px;
-}
-
-#main-content {
-  position: relative;
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+
+#main-content {
+  background: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 15px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  padding: 40px;
+  width: 500px;
+  text-align: center;
+}
+
+
+h1 {
+  font-size: 26px;
+  margin-bottom: 25px;
+  color: #333;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+
+form {
+  display: flex;
   flex-direction: column;
-  border: 1px solid #333;
-  background: rgba(255, 255, 255, 0.3);
-  padding: 15px 20px 18px 18px;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+form label {
+  margin: 5px 0;
+  font-weight: bold;
+  color: #555;
+}
+
+form input[type="text"],
+form select,
+form input[type="date"] {
+  padding: 12px;
+  width: 100%;
+  border: 1px solid #ccc;
   border-radius: 5px;
-  box-shadow: 2px 5px 5px #333;
+  margin-bottom: 15px;
+  transition: border-color 0.3s;
+}
+
+form input[type="text"]:focus,
+form select:focus,
+form input[type="date"]:focus {
+  border-color: #4CAF50;
+}
+
+form input[type="submit"] {
+  padding: 12px 20px;
+  background: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  align-self: center;
+  transition: background-color 0.3s ease;
+}
+
+form input[type="submit"]:hover {
+  background: #45a049;
 }
 
 #list {
-  margin: 10px;
-  border: 1px solid #333;
-  background: rgba(255, 255, 255, 0.75);
-  padding: 15px 20px 18px 18px;
+  margin-top: 20px;
+  width: 100%;
+}
+
+#list h2 {
+  font-size: 22px;
+  margin-bottom: 15px;
+  color: #333;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+}
+
+#tasks {
+  list-style-type: none;
+  padding: 0;
+}
+
+#tasks li {
+  background: #f9f9f9;
+  margin: 8px 0;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: box-shadow 0.3s;
+}
+
+#tasks li:hover {
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#tasks li span {
+  flex-grow: 1;
+  font-size: 16px;
+  color: #333;
+}
+
+#tasks li button {
+  background: #e74c3c;
+  color: white;
+  border: none;
+  padding: 6px 12px;
   border-radius: 5px;
-  box-shadow: 2px 5px 5px #333;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#tasks li button:hover {
+  background: #c0392b;
 }
